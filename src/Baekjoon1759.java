@@ -26,7 +26,7 @@ public class Baekjoon1759 {
         backTracking(0,0);
     }
 
-    public static void backTracking(int a, int b) {
+    public static void backTracking(int a, int b) { //조합
         if (b == inputL) {
             if (validation()) {
                 for (char resultC : outputArr) {
@@ -39,7 +39,7 @@ public class Baekjoon1759 {
 
         for (int i=a; i<inputN; i++) {
             outputArr[b] = inputArr[i];
-            backTracking(i+1, b+1);
+            backTracking(i+1, b+1); // 중복 조합의 경우 -> backTracking(i,b+1)
         }
     }
 
