@@ -39,6 +39,7 @@ public class Baekjoon1759 {
 
         for (int i=a; i<inputN; i++) {
             outputArr[b] = inputArr[i];
+            System.out.println(Arrays.toString(outputArr));
             backTracking(i+1, b+1); // 중복 조합의 경우 -> backTracking(i,b+1)
         }
     }
