@@ -34,13 +34,16 @@ public class Baekjoon9465 {
     }
 
     public static int dp(){
-        arr[0][1] += arr[1][0];
-        arr[1][1] += arr[0][0];
-        for (int i=2; i<n; i++) {
-            arr[0][i] += Math.max(arr[1][i-1], arr[1][i-2]);
-            arr[1][i] += Math.max(arr[0][i-1], arr[0][i-2]);
+        if (n>1) {
+            arr[0][1] += arr[1][0];
+            arr[1][1] += arr[0][0];
+            if (n > 2) {
+                for (int i = 2; i < n; i++) {
+                    arr[0][i] += Math.max(arr[1][i - 1], arr[1][i - 2]);
+                    arr[1][i] += Math.max(arr[0][i - 1], arr[0][i - 2]);
+                }
+            }
         }
-
         return Math.max(arr[0][n-1], arr[1][n-1]);
     }
 }
