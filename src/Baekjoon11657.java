@@ -10,7 +10,7 @@ public class Baekjoon11657 {
         int v;
         int w;
         int c;
-        public Edge (int v, int w, int c) {
+        Edge (int v, int w, int c) {
             this.v = v;
             this.w = w;
             this.c = c;
