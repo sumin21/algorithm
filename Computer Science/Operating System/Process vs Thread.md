@@ -72,14 +72,15 @@
 - 프로세스들의 통신 시간, 방법 어려움 해소
 
 ### 스레드 주소 공간
-
+![img](https://velog.velcdn.com/images/turningtwenty/post/8aac6e60-23a5-431f-87f2-cc11ecb4e7ac/image.png)
 - 하나의 스레드가 동작하기 위해 6개의 공간 존재
     - 사적 공간
         - 스레드 코드 공간
-        - 스레드 전용 전역변수 공간
+        - 스레드 로컬 스토리지(TLS, Thread local storage)
         - 스택 공간
     - 공유 공간
-        - 데이터 공간
+        - 프로세스 코드
+        - 데이터 공간 (로컬 스토리지 제외)
         - 힙 공간
     - 커널 스택
 
