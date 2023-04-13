@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] ars) throws IOException {
-        Baekjoon1138 algorithm = new Baekjoon1138();
-        algorithm.Baekjoon1138();
+        Baekjoon14940 algorithm = new Baekjoon14940();
+        algorithm.Baekjoon14940();
     }
 }
